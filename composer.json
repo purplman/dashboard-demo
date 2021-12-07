@@ -1,0 +1,26 @@
+{
+    "name": "smylmrz/demo",
+    "description": "Demo package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ismayil Mirzayev",
+            "email": "smylmrzpro@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Smylmrz\\Demo\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Smylmrz\\Demo\\DemoServiceProvider"
+            ]
+        }
+    }
+}
