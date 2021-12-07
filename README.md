@@ -1,2 +1,3 @@
 # dashboard-demo
-Dashboard with authentication
+
+Dashboard with admin authentication
