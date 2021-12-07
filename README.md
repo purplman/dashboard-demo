@@ -1,3 +1,3 @@
 # dashboard-demo
 
-Dashboard with admin authentication
+Dashboard with custom admin authentication
