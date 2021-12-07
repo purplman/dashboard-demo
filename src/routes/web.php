@@ -7,7 +7,10 @@ use Smylmrz\Demo\Http\Controllers\RegisterController;
 
 Route::group(['middleware' => 'web'], function () {
     
-    Route::get('/', [DemoController::class, 'index'])->name('dashboard')->middleware('auth');
+    Route::middleware('admin')->group(function () {
+        Route::get('/', [DemoController::class, 'index'])->name('dashboard');
+        Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+    });
 
     Route::prefix('login')->group(function () {
         Route::get('/',  [LoginController::class, 'index'])->name('login')->middleware('guest');

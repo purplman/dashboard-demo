@@ -23,8 +23,13 @@ class LoginController extends Controller {
         if(Auth::attempt($credentials, $remember)){
             return redirect($this->redirectTo);
         }
-          
-        
+    }
+
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->back();
     }
 
 }
