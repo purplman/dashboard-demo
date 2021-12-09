@@ -10,16 +10,27 @@ You can install the package via composer:
 
 You must publish and run the migrations to create the necessary tables:
 
-`php artisan vendor:publish --provider="Smyl\Dashboard\DashboardServiceProvider" <br> php artisan migrate`
+`php artisan vendor:publish --provider="Smyl\Dashboard\DashboardServiceProvider"`
+
+`php artisan migrate`
 
 Content of published config file. These values are used for creating roles.
 
-`return [ 'roles' => [ 'admin', 'editor', 'contributor', 'viewer' ] ];`
+```php
+return [
+    'roles' => [
+        'admin',
+        'editor',
+        'contributor',
+        'viewer'
+        ]
+    ];
+```
 
 After publishing the config file you can customize the roles. To populate the `roles` table run `php artisan roles:create` command.
 
 To create an admin user for loggin in run `php artisan admin:create` command. You can specify `--name`, `--email` and `--password` for the user or defults values will be used.
 
-## Default admin email:
+## Default admin:
 
-`admin@smyl.com`, password: `password`
+Email: `admin@smyl.com`, Password: `password`
