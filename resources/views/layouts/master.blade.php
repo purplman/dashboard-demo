@@ -9,16 +9,16 @@
   </head>
   <body>
     <div id="app" class="app">
-      @include('demo::partials.sidebar')
+      @include('dashboard::partials.sidebar')
 
       <main>
-        @include('demo::partials.header')
+        @include('dashboard::partials.header')
 
         <div id="content" class="content">
           @yield('content')
         </div>
 
-        @include('demo::partials.footer')
+        @include('dashboard::partials.footer')
       </main>
 
     </div>

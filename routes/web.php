@@ -1,15 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Smylmrz\Demo\Http\Controllers\DemoController;
-use Smylmrz\Demo\Http\Controllers\LoginController;
-use Smylmrz\Demo\Http\Controllers\RegisterController;
+use Smylmrz\Dashboard\Http\Controllers\DashboardController;
+use Smylmrz\Dashboard\Http\Controllers\LoginController;
+use Smylmrz\Dashboard\Http\Controllers\RegisterController;
 
 Route::group(['middleware' => 'web'], function () {
     
     Route::middleware('admin')->group(function () {
-        Route::get('/', [DemoController::class, 'index'])->name('dashboard');
-        Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        Route::get('/logout',    [LoginController::class, 'logout'])->name('logout');
     });
 
     Route::prefix('login')->group(function () {

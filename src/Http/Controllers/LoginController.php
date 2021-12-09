@@ -1,6 +1,6 @@
 <?php
 
-namespace Smylmrz\Demo\Http\Controllers;
+namespace Smylmrz\Dashboard\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -8,11 +8,9 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller {
 
-    protected $redirectTo = '/';
-
     public function index()
     {
-        return view('demo::login');
+        return view('dashboard::login');
     }
 
     public function login(Request $request) 
@@ -21,7 +19,7 @@ class LoginController extends Controller {
         $remember = $request->has('remember') ? true : false;
 
         if(Auth::attempt($credentials, $remember)){
-            return redirect($this->redirectTo);
+            return redirect()->route('dashboard');
         }
     }
 

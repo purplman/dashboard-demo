@@ -1,6 +1,6 @@
 <?php
 
-namespace Smylmrz\Demo\Http\Controllers;
+namespace Smylmrz\Dashboard\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -10,7 +10,7 @@ class RegisterController extends Controller {
     
     public function index()
     {
-        return view('demo::register');
+        return view('dashboard::register');
     }
 
     public function register(Request $request)

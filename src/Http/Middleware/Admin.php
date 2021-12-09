@@ -1,6 +1,6 @@
 <?php
 
-namespace Smylmrz\Demo\Http\Middleware;
+namespace Smylmrz\Dashboard\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

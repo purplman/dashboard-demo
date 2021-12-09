@@ -1,4 +1,4 @@
-@extends('demo::layouts.master')
+@extends('dashboard::layouts.master')
 
 @section('content')
 <div class="wrapper">

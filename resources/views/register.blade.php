@@ -1,4 +1,4 @@
-@extends('demo::layouts.auth')
+@extends('dashboard::layouts.auth')
 
 @section('content')
 <form class="auth__form" action="">
