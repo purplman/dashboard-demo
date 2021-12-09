@@ -1,4 +1,4 @@
-# smyl dashboard
+# smyl dashboard V1.0.1
 
 A dashboard with auth to get you started
 
