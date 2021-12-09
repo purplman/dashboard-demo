@@ -1,6 +1,6 @@
-# dashboard-demo
+# smyl dashboard
 
-Dashboard with custom admin authentication
+A dashboard with auth to get you started
 
 ## Installation
 
@@ -10,7 +10,7 @@ You can install the package via composer:
 
 You must publish and run the migrations to create the necessary tables:
 
-`php artisan vendor:publish --provider="Smyl\Dashboard\DashboardServiceProvider" php artisan migrate`
+`php artisan vendor:publish --provider="Smyl\Dashboard\DashboardServiceProvider" <br> php artisan migrate`
 
 Content of published config file. These values are used for creating roles.
 
